@@ -14,7 +14,7 @@ html
 body
 {
 	position:absolute;
-
+	
 	/* html의 기본 여백 제거 */
 	margin:0; right:0; left:0;
 	/* 채팅 메세지가 아래에서부터 나타나도록 */
@@ -23,8 +23,7 @@ body
 
 /* 최대(기본) 크기는 112px */
 img.twitch_emote	{	max-height:50px; }
-img.dccon					{	height:150px; }
-/* img.dccon					{	max-height:100px; } */
+img.dccon					{	max-height:100px; }
 
 
 /* 구독자 및 후원 메세지 설정 */
@@ -39,16 +38,16 @@ img.dccon					{	height:150px; }
 		</div>
 		사실 테스트하려고 후원하는거지만.
 	</div>
-
+	
 	후원 메세지
 	<div class="chat_msg_box">
 		<div class="chat_subscribe_box">(configData.subMonthsMsg)</div>
 		구독인 줄 알았지만 테스트였습니다 Kappa Kappa
-	</div>
+	</div>	
 */
 @keyframes SubsAni { 50%	{ color:red; } }
 .chat_subscribe_box,
-.chat_cheer_box			{	text-align:center;
+.chat_cheer_box			{	text-align:center; 
 											animation:SubsAni 6 1s ease; }
 /* 후원 금액 */
 .chat_cheer_text									{ color:red; display:inline-block; }
@@ -68,27 +67,26 @@ img.dccon					{	height:150px; }
 
 
 /* 폰트 설정 */
-html								{	font-family:'맑은 고딕';
+html								{	font-family:'cwtexyen', 'Jeju Gothic', serif;
 											font-size:20px; color: white;
 											text-shadow:
 						-1px -1px 1px black, -1px   0 1px black,
 						-1px  1px 1px black,    0 1px 1px black,
  						 1px  1px 1px black,  1px   0 1px black,
-						 1px -1px 1px black,   0 -1px 1px black; }
-/*
+						 1px -1px 1px black,   0 -1px 1px black,
+    
 						 -1px -1px 3px grey, -1px   0 3px grey,
 						 -1px  1px 3px grey,    0 1px 3px grey,
 						  1px  1px 3px grey,  1px   0 3px grey,
-						  1px -1px 3px grey,   0 -1px 3px grey; } */
-.chat_nickname_box	{	font-size:1em; font-weight:bold;
- 											margin-bottom:10px; }
+						  1px -1px 3px grey,   0 -1px 3px grey; }
+.chat_nickname_box	{	font-size:0.8em; }
 
 
 .chat_outer_box			{	position:relative; z-index:0; overflow:hidden;
 											margin-top:8px; border:1px solid grey; padding:4px; }
 .chat_inner_box,	/* SOON DEPRECATED */
 .chat_upper_box			{	margin-bottom:3px; }
-
+											
 .chat_nickname_box,
 .chat_badge_box 		{	display:inline-block; }
 .chat_badge_box			{ float:right; }
@@ -96,8 +94,7 @@ html								{	font-family:'맑은 고딕';
 .chat_lower_box			{ clear:right; }
 
 .chat_msg_box							{	white-space:pre-line; word-break:break-word;
-														font-size:25px; font-weight:bold; overflow:hidden;
-														max-height:150px; }
+														max-height:100px; padding:0 0 5px 0; }
 .chat_msg_box.image_only	{	text-align:center; }
 
 
@@ -148,10 +145,10 @@ html								{	font-family:'맑은 고딕';
 }
 
 .chat_clip_box
-{
+{	
 	/* .chat_clip_by의 absolute position을 위해 설정 */
 	position:relative;
-}
+}	
 
 .chat_clip_box img
 {
@@ -165,7 +162,7 @@ html								{	font-family:'맑은 고딕';
 	/* 가로세로로 모두 가운데정렬하기 위해 사용. .chat_clip_box img의 높이와 맞춰준다 */
 	line-height:56px;
 	text-align:center;
-
+	
 	/* 제목이 길 경우를 대비 */
 	white-space:pre;
 	overflow:hidden;
